@@ -1,0 +1,166 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--Css master-->
+    <link rel="stylesheet" type="text/css" href="css/elbuen.css">
+</head>
+
+<body>
+    <!--contenedor del login-->
+    <div class="container">
+        <div class="login-box">
+            <img class="logoTTW" src="css/images/logo2.png" alt="Logo del TTW">
+            <h1>Ingresa tu cuenta</h1>
+            <form>
+                <label for="txtUsuario">Nombre Usuario</label>
+                <input type="text" name="txtUsuario" placeholder="Ingresa tu nombre">
+                <label for="txtContraseña" >Contraseña</label>
+                <input type="text" name="txtContraseña" placeholder="Ingresa tu contraseña">
+
+                <input type="submit" value="Enviar">
+
+                <p align="center">¿Quieres crear una cuenta?</p>
+                <div class="buttons">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EstudianteSing"
+                >Estudiante</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EmpresaSing"
+                >Empresa</button><br><br>
+                </div>
+                
+                <p align="center"><a href="#forgetLink" data-toggle="modal" data-target="#forgetLink"> ¿Olvidaste tu contraseña?</a></p>
+            </form>
+
+
+        </div>
+    </div>
+
+                    <!-- Modal student -->
+                    <div class="modal fade" id="EstudianteSing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalEstudiante">Crear cuenta de Estudiante</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="txtNombreEstudiante" class="col-form-label">Nombre:</label>
+                                        <input type="text" class="form-control" name="txtNombreEstudiante" id="txtNombreEstudiante">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtApellidoEstudiante" class="col-form-label">Apellido:</label>
+                                        <input type="text" class="form-control" name="txtApellidoEstudiante" id="txtApellidoEstudiante">
+                                        <div>
+                                            <label for="genero" class="col-form-label">Genero:</label>
+                                           <p><input type="radio" value="hombre"  name="rdGenero">Hombre</p>
+                                            <p><input type="radio" value="mujer"  name="rdGenero">Mujer</p>
+                                            <p><input type="radio" value="otro"  name="rdGenero">Otro</p>
+                                        </div>
+                                        <div>
+                                            <label for="DateFecha" class="col-form-label">Fecha de nacimiento:</label>
+                                            <input type="date" class="form-control" name="DateFecha" min="1990-01-01" max="2020-12-31">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtEmailEstudiante"  class="col-form-label">Email:</label>
+                                        <input type="text" class="form-control" name="txtEmailEstudiante" id="txtEmailEstudiante">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtContraseñaEstudiante"  class="col-form-label">Contraseña:</label>
+                                        <input type="text" class="form-control" name="txtContraseñaEstudiante" id="txtContraseñaEstudiante">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Crear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                    <!-- Modal2 employer-->
+                    
+                    <div class="modal fade" id="EmpresaSing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="modalEmpresa">Crear cuenta de Empresa</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="form-group">
+                                          <label for="txtNombreEmpresa" class="col-form-label">Nombre de empresa:</label>
+                                          <input type="text" class="form-control" name="txtNombreEmpresa" id="txtNombreEmpresa">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="txtDireccionEmpresa" name="txtDireccionEmpresa" class="col-form-label">Direccion:</label>
+                                          <input type="text" class="form-control" name="txtDireccionEmpresa" id="txtDireccionEmpresa">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="txtEmailEmpresa" name="txtEmailEmpresa" class="col-form-label">Email:</label>
+                                          <input type="text" class="form-control" name="txtEmailEmpresa" id="recipient-name">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="txtContraseñaEmpresa" name="txtContraseñaEmpresa" class="col-form-label">Contraseña:</label>
+                                          <input type="text" class="form-control" name="txtContraseñaEmpresa" id="txtContraseñaEmpresa">
+                                      </div>
+                                  </form>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Create</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Modal3 Did you forget your password? -->
+                  <div class="modal fade" id="forgetLink" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="modalForget">¿Olvidaste tu contraseña?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="form-group">
+                                          <label for="txtCorreo"  class="col-form-label">Please, enter your email:</label>
+                                          <input type="text" class="form-control" name="txtnuevaContraseña" id="txtCorreo">
+                                      </div>
+                                  </form>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                  <button type="button" class="btn btn-primary">Enviar</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                            
+              
+</body>
+
+</html>
